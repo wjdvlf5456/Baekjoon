@@ -22,7 +22,7 @@ public class Q2525 {
 			System.out.println(hour + " " + (cook + minute));
 			
 		} else if (cooktime >= 60) {
-			System.out.println((cooktime / 60 + hour) + "");
+			System.out.println((cooktime / 60 + hour) + "" + cooktime % 60);
 
 		}
 		sc.close();
