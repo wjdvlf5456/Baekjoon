@@ -12,27 +12,33 @@ public class Q4334 {
 		
 		StringTokenizer st = null;
 		
-		int n = Integer.parseInt(br.readLine());	//숫자 몇개 입력하는지
+		int howmany = Integer.parseInt(br.readLine());	//케이스가 몇개 인지	==int howmany = sc.nextInt();
 		
-		int[] arrays = new int[n];
-		st = new StringTokenizer(br.readLine());
-		int sum = 0;
-		for (int i = 0; i < arrays.length; i++) {
-			arrays[i]=Integer.parseInt(st.nextToken());
-			sum = sum + arrays[i];
-		}
-		System.out.println(sum/n);
-		
-		
-		double average = 0;
-		
-		for (int a : arrays) {
-			if (sum/n < a) {
-			average = average+1;
+		for (int i = 0; i < howmany; i++) {	
+			
+			int n = Integer.parseInt(br.readLine());	//학생 수가 몇 명인지
+			
+			int[] arrays = new int[n];
+			st = new StringTokenizer(br.readLine());
+			
+			int sum = 0;
+			for (int j = 0; j < arrays.length; j++) {
+				arrays[j]=Integer.parseInt(st.nextToken());
+				sum = sum + arrays[j];
 			}
+			System.out.println(sum/n);
+			
+			double average = 0;
+			
+			for (int a : arrays) {
+				if (sum/n < a) {
+				average = average+1;
+				}
+			}
+			double many = (average/n)*100;
+			System.out.println(String.format("%.3f", many));	//Math.round()는 소수점 아래가 0이면 표현하지 않아서 String.format을 사용한다.
 		}
-		double many = (average/n)*100;
-		System.out.println(String.format("%.3f", many));
+		
 		
 	}
 
