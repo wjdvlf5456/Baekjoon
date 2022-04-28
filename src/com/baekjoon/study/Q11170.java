@@ -11,30 +11,25 @@ public class Q11170 {
 		int test = sc.nextInt();
 
 		for (int i = 1; i <= test; i++) {
+			int numN = sc.nextInt();
+			int numM = sc.nextInt();
 
-			if (test < 1 && test > 20) {
-				System.out.println("다시 입력해주세요");
-			} else {
-				int numN = sc.nextInt();
-				int numM = sc.nextInt();
-				
-
-				for (int j = numN; numM - j == 0; j++) {
-					int sum = 0;
-
-					while (j != 0) {
-						if (j % 10 == 0) {
-							sum += 1;
-							System.out.println("sum = "+sum+"j는 "+j);
-						}
-						j = j / 10;
-					}
-					System.out.println("sum = "+sum+"j는 "+j);
-
+			int sum = 0;
+			for (int j = numN; j <= numM; j++) {
+				int number = j;
+				if (number == 0) {
+					sum++;
+					continue;
 				}
-				System.out.println("sum = "+"i는 "+i);
+				while (number > 1) {
+					if (number % 10 == 0) {
+						sum++;
 
+					}
+					number = number / 10;
+				}
 			}
+			System.out.println(sum);
 		}
 
 		sc.close();
