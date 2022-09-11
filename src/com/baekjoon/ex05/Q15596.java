@@ -1,4 +1,4 @@
-package com.javaex.ex05;
+package com.baekjoon.ex05;
 
 public class Q15596 {
 	
