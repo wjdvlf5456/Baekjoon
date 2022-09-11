@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Q1712_손익분기점 {
+public class Q1_1712_손익분기점 {
 
 	public static void main(String[] args) throws IOException {
 
