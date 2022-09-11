@@ -37,7 +37,7 @@ public class Q4_2869_달팽이는올라가고싶다 {
 			result = night / perDay;
 
 		}
-		
+
 		System.out.println(result);
 
 		br.close();
