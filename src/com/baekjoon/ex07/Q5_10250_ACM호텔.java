@@ -22,22 +22,21 @@ public class Q5_10250_ACM호텔 {
 			int height = Integer.parseInt(st.nextToken());
 			int width = Integer.parseInt(st.nextToken());
 			int customer = Integer.parseInt(st.nextToken());
-			
 
 			String result = "";
 
 			// 꼭대기층 도달시
 			if (customer % height == 0) {
-				result = height + String.format("%02d", (customer / height)+1);
+				result = height + String.format("%02d", (customer / height));
 
 			} else {
-				result = customer % height + String.format("%02d", (customer / height)+1);
+				result = customer % height + String.format("%02d", (customer / height) + 1);
 
 			}
 
 			testcase[i] = result;
 		}
-		
+
 		for (int i = 0; i < testcase.length; i++) {
 			System.out.println(testcase[i]);
 		}
