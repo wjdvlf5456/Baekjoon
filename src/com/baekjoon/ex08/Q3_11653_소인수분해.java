@@ -10,36 +10,31 @@ import java.util.StringTokenizer;
 public class Q3_11653_소인수분해 {
 
 	public static void main(String[] args) throws IOException {
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
 
-		List<Integer> dList = new ArrayList<Integer>();
-
 		for (int i = 2; i <= n; i++) {
+
 			int count = 0;
-			for (int j = 2; j < i; j++) {
+			for (int j = 2; j < Math.sqrt(i); j++) {
 				if (i % j == 0) {
 					count++;
+					break;
 				}
 
 			}
+
 			if (count < 1) {
-				dList.add(i);
+				while (n % i == 0) {
+					n = n / i;
+					System.out.println(i);
+				}
+
 			}
-
-		}
-
-		int i = 0;
-
-		while (n > 1) {
-			if (n % dList.get(i) == 0) {
-				n = n / dList.get(i);
-				System.out.println(dList.get(i));
-
-			} else {
-				i++;
-
+			if (n < 2) {
+				break;
 			}
 
 		}
