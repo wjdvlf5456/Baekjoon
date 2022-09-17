@@ -19,6 +19,7 @@ public class Q2_2581_소수 {
 		st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
 
+		// 소수를 담을 List
 		List<Integer> nList = new ArrayList<Integer>();
 
 		for (int i = m; i <= n; i++) {
@@ -30,11 +31,13 @@ public class Q2_2581_소수 {
 
 				int count = 0;
 				for (int j = 2; j < i; j++) {
-					if (i % j == 0) {		// 한번이라도 나눠질 경우 소수X
+					// 한번이라도 나눠질 경우 소수X
+					if (i % j == 0) {
 						count++;
 					}
 				}
 
+				// 카운트가 0일시 배열에 추가 (소수)
 				if (count < 1) {
 					nList.add(i);
 				}
@@ -53,7 +56,7 @@ public class Q2_2581_소수 {
 			System.out.println(sum);
 			System.out.println(nList.get(0));
 
-		// 소수가 없을 경우
+			// 소수가 없을 경우
 		} else {
 			System.out.println(-1);
 
