@@ -3,7 +3,6 @@ package com.baekjoon.study;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Ex2748_피보나치수2 {
@@ -15,7 +14,7 @@ public class Ex2748_피보나치수2 {
 
 		int num = Integer.parseInt(st.nextToken());
 
-		int[] numArray = new int[num + 1];
+		long[] numArray = new long[num + 1];
 
 		numArray[0] = 0;
 		numArray[1] = 1;
