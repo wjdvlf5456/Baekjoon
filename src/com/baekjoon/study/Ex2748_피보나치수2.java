@@ -14,18 +14,28 @@ public class Ex2748_피보나치수2 {
 
 		int num = Integer.parseInt(st.nextToken());
 
-		long[] numArray = new long[num + 1];
+		long num0 = 0;
+		long num1 = 1;
 
-		numArray[0] = 0;
-		numArray[1] = 1;
-		numArray[2] = 1;
+		int i = 2;
+		long fib = 0;
 
-		for (int i = 3; i < numArray.length; i++) {
-			numArray[i] = numArray[i - 2] + numArray[i - 1];
+		if (num == 0) {
+			System.out.println(num0);
+		} else if (num == 1) {
+			System.out.println(num1);
+
+		} else {
+			while (i <= num) {
+				fib = num0 + num1;
+				num0 = num1;
+				num1 = fib;
+
+				i++;
+			}
+			System.out.println(fib);
+
 		}
-
-		System.out.println(numArray[num]);
-
 		br.close();
 
 	}
