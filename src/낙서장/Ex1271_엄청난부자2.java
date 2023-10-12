@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.math.BigInteger;
 import java.util.StringTokenizer;
 
 public class Ex1271_엄청난부자2 {
@@ -15,12 +16,12 @@ public class Ex1271_엄청난부자2 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		BigInteger n = new BigInteger(st.nextToken());
+		BigInteger m = new BigInteger(st.nextToken());
 
-		bw.write(String.valueOf(n / m));
+		bw.write(String.valueOf(n.divide(m)));
 		bw.newLine();
-		bw.write(String.valueOf(n % m));
+		bw.write(String.valueOf(n.remainder(m)));
 
 		bw.flush();
 		bw.close();
