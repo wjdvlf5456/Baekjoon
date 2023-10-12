@@ -1,4 +1,4 @@
-package com.baekjoon.ex08;
+package 문자열;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,46 +7,46 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Q3_11653_소인수분해 {
+public class Ex10809_알파벳찾기 {
 
 	public static void main(String[] args) throws IOException {
-
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int n = Integer.parseInt(st.nextToken());
+		StringBuilder sb = new StringBuilder();
 
-		for (int i = 2; i <= n; i++) {
+		String word = st.nextToken();
+		boolean flag = false;
 
-			int count = 0;
-			for (int j = 2; j <= Math.sqrt(i); j++) {
-				if (i % j == 0) {
-					count++;
-				}
-
-			}
-
-			if (count < 1) {
-
-				while (n % i == 0) {
-
-					n = n / i;
-					bw.write(Integer.toString(i));
-					bw.write("\n");
+		for (int i = 97; i < 123; i++) {
+			
+			for (int j = 0; j < word.length(); j++) {
+				if ((int) word.charAt(j) == i) {
+					sb.append(j + " ");
+					flag = true;
+					break;
 
 				}
 
 			}
 
-			if (n < 2) {
-				break;
+			if (flag == false) {
+				sb.append("-1 ");
 			}
 
+			flag = false;
+
+			
 		}
-
+		
+		bw.write(sb.toString());
+		
+		bw.flush();
 		bw.close();
 		br.close();
 
 	}
 
 }
+
+// 97 122

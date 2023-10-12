@@ -19,7 +19,7 @@ public class Q3_10989_수_정렬하기3 {
 
 		for (int i = 0; i < n; i++) {
 			nList.add(Integer.parseInt(br.readLine()));
-		}
+		};
 
 		Collections.sort(nList);
 
