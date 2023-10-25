@@ -70,14 +70,14 @@ public class Ex6996_애너그램 {
 			bw.write(" & ");
 			bw.write(sWord);
 			bw.write(" are");
-			
+
 			if (flag == false) {
 				bw.write(" NOT");
 			}
 
 			bw.write(" anagrams.");
 			bw.newLine();
-			
+
 			bw.flush();
 
 		}
