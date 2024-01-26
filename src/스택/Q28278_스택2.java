@@ -1,8 +1,10 @@
 package 스택;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
@@ -11,6 +13,7 @@ public class Q28278_스택2 {
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		Stack<Integer> stack = new Stack<Integer>();
 
@@ -27,38 +30,39 @@ public class Q28278_스택2 {
 			if (M == 1) {
 				Num = Integer.parseInt(st.nextToken());
 				stack.push(Num);
+				continue;
 
 			} else if (M == 2) {
-				if (stack.size()==0) {
-					System.out.println(-1);
+				if (stack.size() == 0) {
+					bw.write("-1");
 				} else {
-					System.out.println(stack.lastElement());
+					bw.write(Integer.toString(stack.lastElement()));
 					stack.pop();
 				}
 
 			} else if (M == 3) {
-				System.out.println(stack.size());
+				bw.write(Integer.toString(stack.size()));
 
 			} else if (M == 4) {
 				if (stack.size() == 0) {
-					System.out.println(1);
+					bw.write("1");
 				} else {
-					System.out.println(0);
+					bw.write("0");
 				}
 
 			} else if (M == 5) {
 				if (stack.size() == 0) {
-					System.out.println(-1);
+					bw.write("-1");
 				} else {
-					System.out.println(stack.lastElement());
+					bw.write(Integer.toString(stack.lastElement()));
 				}
 
-			} else {
-				continue;
 			}
+			bw.newLine();
 
 		}
-
+		bw.flush();
+		bw.close();
 		br.close();
 
 	}
