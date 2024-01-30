@@ -18,6 +18,7 @@ public class Q28278_스택2 {
 		Stack<String> stack = new Stack<String>();
 
 		int N = Integer.parseInt(br.readLine());
+		
 		String M;
 		String Num;
 
