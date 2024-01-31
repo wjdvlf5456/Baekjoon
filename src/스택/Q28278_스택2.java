@@ -21,6 +21,7 @@ public class Q28278_스택2 {
 		
 		String M;
 		String Num;
+		
 
 		StringTokenizer st;
 
