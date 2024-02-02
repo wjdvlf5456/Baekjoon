@@ -20,9 +20,7 @@ public class Q28278_스택2 {
 		int N = Integer.parseInt(br.readLine());
 		
 		String M;
-		
 		String Num;
-		
 
 		StringTokenizer st;
 
