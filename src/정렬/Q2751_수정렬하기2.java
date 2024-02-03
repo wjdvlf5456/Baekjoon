@@ -12,6 +12,7 @@ public class Q2751_수정렬하기2 {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 
 		int N = Integer.parseInt(br.readLine());
 		int nn;
