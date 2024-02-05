@@ -19,6 +19,7 @@ public class Q2751_수정렬하기2 {
 
 		for (int i = 0; i < N; i++) {
 			nn = Integer.parseInt(br.readLine());
+			
 
 		}
 
