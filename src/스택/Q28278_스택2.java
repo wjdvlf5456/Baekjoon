@@ -14,6 +14,7 @@ public class Q28278_스택2 {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 
 		Stack<String> stack = new Stack<String>();
 
