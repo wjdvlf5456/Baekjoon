@@ -1,47 +1,47 @@
 package com.baekjoon.study;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.StringTokenizer;
+import java.io.OutputStreamWriter;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Ex1181_단어정렬 {
 
 	public static void main(String[] args) throws IOException {
-
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		int n = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(br.readLine());
 
-		String[] stArray = new String[n];
+		Map<String, Integer> nMap = new TreeMap<>();
 
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine());
-			stArray[i] = st.nextToken(); 
+		String word;
 
+		for (int i = 0; i < N; i++) {
+			word = br.readLine();
+			nMap.put(word, word.length());
 		}
 
-		// 단어정렬하기
-		Arrays.sort(stArray, new Comparator<String>() {
-			public int compare(String s1, String s2) {
-				if (s1.length() == s2.length()) {		// 길이순으로 먼저 정렬하기
-					return s1.compareTo(s2);
-				} else {
-					return s1.length() - s2.length();	// 사전순으로 정렬하기
+		int i = 1;
+		int count = 0;
+
+		while (count < nMap.size()) {
+			for (String j : nMap.keySet()) {
+				if (nMap.get(j) == i) {
+					bw.append(j);
+					bw.newLine();
+					count++;
 				}
 			}
-
-		});
-
-		
-		for (int i = 0; i < stArray.length; i++) {
-			System.out.println(stArray[i]);
+			i++;
 		}
-		
 
+		bw.flush();
+
+		bw.close();
 		br.close();
 
 	}
