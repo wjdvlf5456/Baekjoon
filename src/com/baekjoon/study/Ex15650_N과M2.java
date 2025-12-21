@@ -1,42 +1,39 @@
-package 정렬;
+package com.baekjoon.study;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
+import java.util.StringTokenizer;
 
-public class Q2751_수정렬하기2 {
+public class Ex15650_N과M2 {
+	
+	static int N,M;
+	static Boolean flag[];
+	
+	
 
 	public static void main(String[] args) throws IOException {
-
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
-		int N = Integer.parseInt(br.readLine());
-		
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+
 		int[] nArr = new int[N];
-		
+
 		for (int i = 0; i < N; i++) {
-			nArr[i] = Integer.parseInt(br.readLine());
-		}
-		int temp;
-		
-		for (int i = 0; i < N-1; i++) {
-			if (nArr[i]>nArr[i+1]) {
-				temp = nArr[i+1];
-				nArr[i+1] = nArr[i];
-				nArr[i] = temp;
-			}
+			nArr[i] = i + 1;
 		}
 		
-		System.out.println(Arrays.toString(nArr));
 		
 		
 
-		bw.flush();
 		bw.close();
 		br.close();
+
 	}
+
 }
